@@ -1,0 +1,13 @@
+<configuration>
+    <!-- CONSOLE -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{dd/MM/yyyy HH:mm:ss,SSS'Z'}] [%level] [%thread] [%class{0}.%method] %mdc - %message%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+<!--    <logger name="org.springframework.boot.test.context.SpringBootTestContextBootstrapper" level="OFF"/>-->
+</configuration>

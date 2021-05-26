@@ -14,3 +14,8 @@ spring:
         # These configure is used for graceful shutdown async process (@Async), and example is AsyncProcessService.java
         await-termination: true
         await-termination-period: 30s
+    scheduling:
+      shutdown:
+        # These configure is used for graceful shutdown cronjob (@Schedule), an example is LongRunCronJob
+        await-termination: true
+        await-termination-period: 30s

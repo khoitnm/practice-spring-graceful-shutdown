@@ -1,4 +1,4 @@
-package org.tnmk.practicespringgracefulshutdown.pro00webserver.sample_rest_api;
+package org.tnmk.practicespringgracefulshutdown.pro00webserver.sample_rest_api.async.spring_async;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

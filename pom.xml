@@ -10,6 +10,7 @@
 
     <modules>
         <module>pro-00-web-server</module>
+        <module>pro-01-cron-job</module>
     </modules>
 
     <properties>
