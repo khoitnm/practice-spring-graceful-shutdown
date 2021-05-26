@@ -48,4 +48,4 @@ Then, when stopping server in the middle, we'll see these log messages in the co
 Similar to the previous testing, this time, we'll trigger this request (by using Browser):
 http://localhost:8080/long-run-request/async
 
-Then again, go to the terminal, press `Ctrl-C` to stop it.
+Then again, go to the terminal, press `Ctrl-C` to stop it when the request is still processing.
