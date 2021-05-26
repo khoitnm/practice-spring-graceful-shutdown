@@ -43,3 +43,9 @@ Then, when stopping server in the middle, we'll see these log messages in the co
 [26/05/2021 13:18:09] [INFO] [tomcat-shutdown] [GracefulShutdown.doShutdown]  - Graceful shutdown aborted with one or more requests still active
 [26/05/2021 13:18:11] [INFO] [SpringContextShutdownHook] [ExecutorConfigurationSupport.shutdown]  - Shutting down ExecutorService 'applicationTaskExecutor' 
 ```
+
+# Test graceful shutdown with async process
+Similar to the previous testing, this time, we'll trigger this request (by using Browser):
+http://localhost:8080/long-run-request/async
+
+Then again, go to the terminal, press `Ctrl-C` to stop it.
