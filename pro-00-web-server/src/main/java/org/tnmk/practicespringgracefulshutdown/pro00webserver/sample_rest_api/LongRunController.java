@@ -11,10 +11,22 @@ import java.lang.invoke.MethodHandles;
 public class LongRunController {
   private final static Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-  @GetMapping("/long-run-request")
-  public void startLongRunRequest() throws InterruptedException {
+  /**
+   * The timeout limit is configured in `application.yml`: timeout-per-shutdown-phase
+   * @throws InterruptedException
+   */
+  @GetMapping("/long-run-request/within-timeout-limit")
+  public void startLongRunRequest_withinTimeoutLimit() throws InterruptedException {
     logger.info("Starting a long-run request...");
-    Thread.sleep(60000);
-    logger.info("Finish the long-run request!!!");
+    Thread.sleep(25000);
+    logger.info("Finish the long-run request within time out limit!!!");
+  }
+
+  @GetMapping("/long-run-request/exceed-timeout-limit")
+  public void startLongRunRequest_Exceed() throws InterruptedException {
+    logger.info("Starting a long-run request...");
+    Thread.sleep(80000);
+    logger.info("I don't expect to see this message in the log console because "
+        + "the request exceeds the timeout limit and it will be stopped in the middle.");
   }
 }
