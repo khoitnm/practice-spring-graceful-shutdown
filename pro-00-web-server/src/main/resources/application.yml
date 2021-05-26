@@ -1,7 +1,10 @@
 server:
   port: 8080
 
+  # https://www.baeldung.com/spring-boot-web-server-shutdown
+  shutdown: graceful
 spring:
-  jackson:
-    # This will help to convert string format to ZonedDateTime.
-    date-format: com.fasterxml.jackson.databind.util.StdDateFormat
+  lifecycle:
+    # https://www.baeldung.com/spring-boot-web-server-shutdown
+    # timeout config for graceful shutdown
+    timeout-per-shutdown-phase: 30s

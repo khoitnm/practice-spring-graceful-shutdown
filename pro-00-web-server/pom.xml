@@ -37,13 +37,6 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
 
-        <!-- Twilio -->
-        <dependency>
-            <groupId>com.twilio.sdk</groupId>
-            <artifactId>twilio</artifactId>
-            <version>${twilio.version}</version>
-        </dependency>
-
         <!-- TEST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
