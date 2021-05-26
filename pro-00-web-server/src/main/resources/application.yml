@@ -1,0 +1,7 @@
+server:
+  port: 8080
+
+spring:
+  jackson:
+    # This will help to convert string format to ZonedDateTime.
+    date-format: com.fasterxml.jackson.databind.util.StdDateFormat

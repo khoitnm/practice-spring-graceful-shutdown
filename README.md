@@ -1,1 +1,1 @@
-Init
+The main purpose of this practice is to see whether we can gracefully shutdown an application when there are some running processes.
