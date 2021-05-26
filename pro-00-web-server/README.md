@@ -48,4 +48,14 @@ Then, when stopping server in the middle, we'll see these log messages in the co
 Similar to the previous testing, this time, we'll trigger this request (by using Browser):
 http://localhost:8080/long-run-request/async
 
-Then again, go to the terminal, press `Ctrl-C` to stop it when the request is still processing.
+Then again, go to the terminal, press `Ctrl-C` to stop it when the request is still processing, we'll see these log messages:
+``` 
+[26/05/2021 13:45:36] [INFO] [http-nio-8080-exec-1] [AsyncProcessController.startLongRunRequest_withinTimeoutLimit]  - Trigger an async request...
+[26/05/2021 13:45:36] [INFO] [task-1] [AsyncProcessService.runLongProcessAsync]  - Starting an async long-run request ...
+[26/05/2021 13:45:39] [INFO] [SpringContextShutdownHook] [GracefulShutdown.shutDownGracefully]  - Commencing graceful shutdown. Waiting for active requests to complete
+[26/05/2021 13:45:46] [INFO] [http-nio-8080-exec-1] [AsyncProcessController.startLongRunRequest_withinTimeoutLimit]  - Finished triggering the async request, and it is processing in an
+other thread...
+[26/05/2021 13:45:46] [INFO] [tomcat-shutdown] [GracefulShutdown.doShutdown]  - Graceful shutdown complete
+[26/05/2021 13:45:46] [INFO] [SpringContextShutdownHook] [ExecutorConfigurationSupport.shutdown]  - Shutting down ExecutorService 'applicationTaskExecutor'
+[26/05/2021 13:45:56] [INFO] [task-1] [AsyncProcessService.runLongProcessAsync]  - Finish the async long-run request within time out limit!!!
+```

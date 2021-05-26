@@ -14,7 +14,7 @@ public class AsyncProcessService {
   @Async
   public void runLongProcessAsync() throws InterruptedException {
     logger.info("Starting an async long-run request ...");
-    Thread.sleep(25000);
+    Thread.sleep(20000);
     logger.info("Finish the async long-run request within time out limit!!!");
   }
 }

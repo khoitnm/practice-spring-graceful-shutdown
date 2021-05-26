@@ -8,3 +8,10 @@ spring:
     # https://www.baeldung.com/spring-boot-web-server-shutdown
     # timeout config for graceful shutdown
     timeout-per-shutdown-phase: 30s
+  task:
+    execution:
+      shutdown:
+        # These configure is used for graceful shutdown async process (@Async) and cronjob (@Schedule)
+        # An example of @Async is implement in AsyncProcessService
+        await-termination: true
+        await-termination-period: 30s
